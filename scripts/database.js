@@ -1,9 +1,13 @@
+export const getFish = () => {
+    return database.fish.map(fish => ({...fish}))
+}
+
 const database = {
     fish: [
         {
             id: 1,  
             image: `./images/sparkle-gourami`,
-            fishName: `Sparkle Gourami`,
+            name: `Sparkle Gourami`,
             species: `Trichopsis pumila`,
             length: 2,
             harvestLocation: `Southeast Asia`,
@@ -12,7 +16,7 @@ const database = {
         {
             id: 2,  
             image: `./images/electric-blue-acara.webp`,
-            fishName: `Electric Blue Acara`,
+            name: `Electric Blue Acara`,
             species: `Andinoacara pulcher`,
             length: 6,
             harvestLocation: `South America`,
@@ -21,7 +25,7 @@ const database = {
         {
             id: 3,  
             image: `./images/redtail-catfish.webp`,
-            fishName: `Redtail Catfish`,
+            name: `Redtail Catfish`,
             species: `Phractocephalus hemioliopterus`,
             length: 5,
             harvestLocation: `South America`,
@@ -30,7 +34,7 @@ const database = {
         {
             id: 4,  
             image: `./images/rainbowfish.webp`,
-            fishName: `Rainbowfish`,
+            name: `Rainbowfish`,
             species: `Melanotaenia spp.`,
             length: 4,
             harvestLocation: `Australia`,
@@ -39,7 +43,7 @@ const database = {
         {
             id: 5,  
             image: `./images/discus.webp`,
-            fishName: `Discus`,
+            name: `Discus`,
             species: `Symphysodon spp.`,
             length: 8,
             harvestLocation: `South America`,
@@ -48,7 +52,7 @@ const database = {
         {
             id: 6,  
             image: `./images/bristlenose-pleco.webp`,
-            fishName: `Bristlenose Pleco`,
+            name: `Bristlenose Pleco`,
             species: `Ancistrus spp.`,
             length: 5,
             harvestLocation: `South America`,
@@ -57,7 +61,7 @@ const database = {
         {
             id: 7,  
             image: `./images/archerfish.webp`,
-            fishName: `Archerfish`,
+            name: `Archerfish`,
             species: `Toxotes spp.`,
             length: 11,
             harvestLocation: `Southeast Asia`,
@@ -66,7 +70,7 @@ const database = {
         {
             id: 8,  
             image: `./images/clown-loach.webp`,
-            fishName: `Clown Loach`,
+            name: `Clown Loach`,
             species: `Chromobotia macracanthus`,
             length: 6,
             harvestLocation: `Indonesia`,
@@ -75,7 +79,7 @@ const database = {
         {
             id: 9,  
             image: `./images/neon-tetra.webp`,
-            fishName: `Neon Tetra`,
+            name: `Neon Tetra`,
             species: `Paracheirodon innesi`,
             length: 1.5,
             harvestLocation: `Amazon Basin`,
@@ -84,7 +88,7 @@ const database = {
         {
             id: 10,  
             image: `./images/corydoras-catfish.webp`,
-            fishName: `Corydoras Catfish`,
+            name: `Corydoras Catfish`,
             species: `Corydoras spp.`,
             length: 3,
             harvestLocation: `South America`,
@@ -93,7 +97,7 @@ const database = {
         {
             id: 11,  
             image: `./images/dwarf-gourami.webp`,
-            fishName: `Dwarf Gourami`,
+            name: `Dwarf Gourami`,
             species: `Trichogaster lalius`,
             length: 2,
             harvestLocation: `Southeast Asia`,
@@ -102,7 +106,7 @@ const database = {
         {
             id: 12,  
             image: `./images/siamese-fighting-fish.webp`,
-            fishName: `Siamese Fighting Fish`,
+            name: `Siamese Fighting Fish`,
             species: `Betta splendens`,
             length: 3,
             harvestLocation: `Southeast Asia`,
@@ -111,7 +115,7 @@ const database = {
         {
             id: 13,  
             image: `./images/tiger-barb.webp`,
-            fishName: `Tiger Barb`,
+            name: `Tiger Barb`,
             species: `Puntigrus tetrazona`,
             length: 2.5,
             harvestLocation: `Southeast Asia`,
@@ -120,7 +124,7 @@ const database = {
         {
             id: 14,  
             image: `./images/angelfish.webp`,
-            fishName: `Angelfish`,
+            name: `Angelfish`,
             species: `Pterophyllum scalare`,
             length: 6,
             harvestLocation: `South America`,
@@ -129,7 +133,7 @@ const database = {
         {
             id: 15,  
             image: `./images/zebra-danio.webp`,
-            fishName: `Zebra Danio`,
+            name: `Zebra Danio`,
             species: `Danio rerio`,
             length: 2,
             harvestLocation: `india`,
