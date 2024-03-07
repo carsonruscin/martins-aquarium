@@ -1,0 +1,9 @@
+.fishCard {
+    border: 3px dotted crimson;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.fishCard__img {
+    width: 500px;
+    height: 500px;
+}

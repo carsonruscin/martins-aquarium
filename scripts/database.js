@@ -1,12 +1,8 @@
-export const getFish = () => {
-    return database.fish.map(fish => ({...fish}))
-}
-
 const database = {
     fish: [
         {
             id: 1,  
-            image: `./images/sparkle-gourami`,
+            image: `./images/sparkle-gourami.webp`,
             name: `Sparkle Gourami`,
             species: `Trichopsis pumila`,
             length: 2,
@@ -140,4 +136,47 @@ const database = {
             diet: `brine shrimp and algae`,
         }
     ]
+}
+
+
+export const getFish = () => {
+    return database.fish.map(fish => ({...fish}))
+}
+
+const allFish = getFish()
+
+export const mostHolyFish = () => {
+    // 3, 6, 9, 12, etc... fish (multiples of 3)
+    const holyFish = []
+
+    for ( const eachFish of allFish) {
+        if (eachFish.length % 3 === 0) {
+            holyFish.push(eachFish)
+        }
+    }
+    return holyFish
+}
+
+export const soldierFish = () => {
+    // 5, 10, 15, 20, 25, etc... fish (multiples of 5)
+    const soldiers = []
+
+    for (const eachFish of allFish) {
+        if (eachFish.length % 5 === 0) {
+            soldiers.push(eachFish)
+        }
+    }
+    return soldiers
+}
+
+export const nonHolyFish = () => {
+    // Any fish not a multiple of 3 or 5
+    const regularFish = []
+
+    for (const eachFish of allFish) {
+        if (eachFish.length % 3 !== 0 || eachFish % 5 !== 0) {
+            regularFish.push(eachFish)
+        }
+    }
+    return regularFish
 }
