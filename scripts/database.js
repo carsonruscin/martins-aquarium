@@ -135,9 +135,25 @@ const database = {
             harvestLocation: `india`,
             diet: `brine shrimp and algae`,
         }
+    ],
+    careTips: [
+        {
+            id: 1,
+            tankTip: `schedule regular tank water changes to prevent more serious or long term problems.`,
+            waterTip: `regularly test the aquarium water for properly pH levels to insure healthy fish.`,
+            filterTip: `regularly service the water filter, have spare filters on hand in case quick changes are needed to prevent complete water replacement.`,
+        }
     ]
 }
 
+
+export const getLocations = () => {
+    return database.fish.map(harvestLocation => ({...harvestLocation}))
+}
+
+export const getCareTips = () => {
+    return database.careTips.map(careTips => ({...careTips}))
+}
 
 export const getFish = () => {
     return database.fish.map(fish => ({...fish}))
@@ -174,7 +190,7 @@ export const nonHolyFish = () => {
     const regularFish = []
 
     for (const eachFish of allFish) {
-        if (eachFish.length % 3 !== 0 || eachFish % 5 !== 0) {
+        if (eachFish.length % 3 !== 0 || eachFish.length % 5 !== 0) {
             regularFish.push(eachFish)
         }
     }

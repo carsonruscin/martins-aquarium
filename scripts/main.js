@@ -1,8 +1,7 @@
 import { getFish } from './database.js'
 import { FishList } from './fish/fishlist.js'
-import { mostHolyFish } from './database.js'
-import { soldierFish } from './database.js'
-import { nonHolyFish } from './database.js'
+import { careTipList } from './tips/caretips.js'
+import { locationList } from './locations/locations.js'
 
 const allFish = getFish()
 
@@ -10,6 +9,11 @@ for (const fish of allFish) {
     console.log(fish)
 }
 
-const parentHTMLElement = document.querySelector("#FishContainer")
+const mainHTMLElement = document.querySelector("#FishContainer")
+mainHTMLElement.innerHTML = FishList()
 
-parentHTMLElement.innerHTML = FishList()
+const tipsHTMLElement = document.querySelector("#CareTips")
+tipsHTMLElement.innerHTML = careTipList()
+
+const locationsHTMLElement = document.querySelector("#FishLocations")
+locationsHTMLElement.innerHTML = locationList()
